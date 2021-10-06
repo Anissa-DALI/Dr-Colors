@@ -59,7 +59,7 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
-        return (string) $this->;
+        return (string) $this->email;
     }
 
     /**
