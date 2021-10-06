@@ -22,7 +22,7 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
-    private $dradmin;
+    private $email;
 
     /**
      * @ORM\Column(type="json")
@@ -40,14 +40,14 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->id;
     }
 
-    public function getDradmin(): ?string
+    public function getEmail(): ?string
     {
-        return $this->dradmin;
+        return $this->email;
     }
 
-    public function setDradmin(string $dradmin): self
+    public function setEmail(string $email): self
     {
-        $this->dradmin = $dradmin;
+        $this->email = $email;
 
         return $this;
     }
@@ -59,7 +59,7 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
-        return (string) $this->dradmin;
+        return (string) $this->;
     }
 
     /**
@@ -67,7 +67,7 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUsername(): string
     {
-        return (string) $this->dradmin;
+        return (string) $this->email;
     }
 
     /**
