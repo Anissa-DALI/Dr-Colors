@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello A proposController!{% endblock %}
+
+{% block body %}
+<h1 class="text-center my-5">
+	A PROPOS</h1>
+<div class="d-flex justify-content-center">
+	<div class="card mr-5" style="width: 22rem;">
+		<img class="card-img-fluid" src="{{asset('/images/drcolorspres.jpg')}}" alt="duodrcolors">
+	</div>
+	<div class="card bg-light ml-5" style="width: 20rem;">
+		<div class="card-body">
+			<p class="card-text">Drcolors est un duo d'artistes-artisans originaires du nord de la France : spécialistes de la réanimation murale. DrColors exerce son savoir-faire pour réaliser vos projets. 
+																				Talents complémentaires et techniques maîtrisées font partie de nos gages de qualités. De la fresque murale au design d'objet et d'espace, nous vous proposons une réalisation sur mesure,
+																				toujours créative et adaptée à votre univers.</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
