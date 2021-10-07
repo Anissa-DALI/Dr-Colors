@@ -2,12 +2,14 @@
 
 {% block title %}Contactez-nous - Pro - Drcolors {% endblock %}
 {% block description %}
-<mata name="description" content="Remplacer ce texte par une description que base affichera">
+<mata name="description" content="Formulaire de contact - professionnels - Drcolors>
  {% endblock %}
 
 
 {% block body %}
 <div class="container"> 
+<h1 class="p-4 m-3">{% block h1 %} Collectivité, entreprises, associations {% endblock %}</h1>
+
 {% form_theme form 'bootstrap_5_layout.html.twig' %}
   
 {{ form_start(form) }}
