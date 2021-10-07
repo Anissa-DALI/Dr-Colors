@@ -4,12 +4,27 @@
 
 {% block body %}
 
+{{ include('partials/headerhomepage.html.twig') }}
 
-<div class="example-wrapper">
-    <h1>Bienvenue sur Dr Colors !</h1>
+<h1 class="text-center my-5">
+	Dr Colors - Réanimation murale
+</h1>
 
+<div class="container-fluid">
+    <div class="firstinfo .flex-lg-row d-flex justify-content-center d-flex flex-wrap my-5">
+        <div class="w-25 mx-5">
+            <h2>Some Text</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique molestiae alias provident iste perferendis ducimus neque, esse modi asperiores aperiam reprehenderit odio debitis eaque id tempore voluptas a placeat ullam!</p>
+        </div>
+        <img src="https://dummyimage.com/400x200/000/fff" class="" alt="imgaccueil">
+    </div>
+    <div class="firstinfo .flex-lg-row d-flex justify-content-center d-flex flex-wrap d-flex flex-row-reverse my-5">
+        <div class="w-25 mx-5">
+            <h2>Some Text</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique molestiae alias provident iste perferendis ducimus neque, esse modi asperiores aperiam reprehenderit odio debitis eaque id tempore voluptas a placeat ullam!</p>
+        </div>
+        <img src="https://dummyimage.com/400x200/000/fff" class="" alt="imgaccueil">
+    </div>
 </div>
-
-
 
 {% endblock %}
