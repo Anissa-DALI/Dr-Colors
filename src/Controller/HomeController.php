@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Controller;
-use app\Entity\Fans;
-use App\Form\ContactFormType;
+use app\Entity\Particulier;
+use App\Form\FparticulierType;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Persistence\ObjectManager as PersistenceObjectManager;
@@ -42,18 +42,30 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-    #[Route('/contact', name: 'contact')]
-    public function forms() :response
+    #[Route('/particulier', name: 'particulier')]
+    public function particulier() :response
  {   
      
-             $form = $this ->createForm(ContactFormType::class );
+             $form = $this ->createForm(FParticulierType::class );
              
-          return $this->render('home/contact.html.twig', [
+          return $this->render('home/contact-particulier.html.twig', [
             'controller_name' => 'HomeController',
             'form'=>$form->createView()
         ]);
     }
-    
+#Décommenter pour une route pro# 
+#    #[Route('/professionnel', name: 'professionnel')]
+ #   public function professionnel() :response
+ #{   
+     
+          #   $form = $this ->createForm(ProfessionnelType::class );
+             
+         # return $this->render('home/contact-professionel.html.twig', [
+          #  'controller_name' => 'HomeController',
+        #   'form'=>$form->createView()
+        #]);
+    #}
+  #}  
     #[Route('/aboutus', name: 'aboutus')]
     public function aboutus(): Response
     {

@@ -1,14 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Contactez les artistes {% endblock %}
+{% block title %}Contactez-nous - Pro - Drcolors {% endblock %}
 {% block description %}
 <mata name="description" content="Remplacer ce texte par une description que base affichera">
  {% endblock %}
 
 
 {% block body %}
-<div class ="form-group margin-left:10px">
-<form> 
+<div class="container"> 
 {% form_theme form 'bootstrap_5_layout.html.twig' %}
   
 {{ form_start(form) }}
@@ -18,7 +17,7 @@
     <input type="submit"/>
 
 {{ form_end(form) }}
-</form>
+
 </div>
 {% endblock %}
 
