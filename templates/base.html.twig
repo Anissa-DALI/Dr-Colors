@@ -16,11 +16,13 @@
   </head>
   <body>
   {{ include ('partials/header.html.twig')}} 
-  {{ include ('partials/menu.html.twig')}} 
+   {{ include ('partials/menu.html.twig')}}
   <!--marges et padding pour toutes les pages.-->
   <div class="container p-4 m-3"> 
   {% block body %}
+   
   {% block h1 %} {{h1}} {% endblock %} 
+  
   {% endblock %}
     
       <!--Ordre conventionnel : JS Bootstrap puis JS Twig puis JS personnalisé-->

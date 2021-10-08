@@ -34,7 +34,7 @@ class FparticulierType extends AbstractType
                 'choices' => [
                     'Exterieur' => 1,
                     'Interieur' => 2,
-                    'Special' => 3,]
+                    'Spécial' => 3,]
                     
             ])
             

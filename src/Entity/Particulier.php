@@ -47,6 +47,11 @@ class Particulier
      */
     private $Message;
 
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $Realisation;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -111,15 +116,28 @@ class Particulier
 
         return $this;
     }
+    
 
     public function getMessage(): ?string
     {
         return $this->Message;
     }
-
+     
     public function setMessage(string $Message): self
     {
         $this->Message = $Message;
+
+        return $this;
+    }
+
+    public function getRealisation(): ?string
+    {
+        return $this->Realisation;
+    }
+
+    public function setRealisation(string $Realisation): self
+    {
+        $this->Realisation = $Realisation;
 
         return $this;
     }
