@@ -5,14 +5,17 @@ namespace App\DataFixtures;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use app\Entity\Login;
+use app\src\DataFixtures\AppFixtures;
 
 class LoginFixture extends Fixture
 {
+
+
     public function load(ObjectManager $manager): void
     {
         $login = new Login();
           $login->setLogin("admin@test.com");
-          $login->setPassword("123456");
+          $login->setPassword($this->encoder->encodePassword($login, '123456'));
 
 
         // $product = new Product();
