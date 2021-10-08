@@ -34,7 +34,9 @@ class HomeController extends AbstractController
         return $this->render('home/nos-services.html.twig', [
             'controller_name' => 'HomeController',
         ]);
+        
     }
+    
     #[Route('/portefolio', name: 'portefolio')]
     public function portefolio(): Response
     {
@@ -45,8 +47,7 @@ class HomeController extends AbstractController
     #[Route('/particulier', name: 'particulier')]
     public function particulier() :response
  {   
-     
-             $form = $this ->createForm(FParticulierType::class );
+       $form = $this ->createForm(FParticulierType::class );
              
           return $this->render('home/contact-particulier.html.twig', [
             'controller_name' => 'HomeController',
@@ -66,6 +67,7 @@ class HomeController extends AbstractController
         #]);
     #}
   #}  
+  
     #[Route('/aboutus', name: 'aboutus')]
     public function aboutus(): Response
     {
@@ -73,4 +75,6 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    
+
 }

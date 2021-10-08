@@ -8,7 +8,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class FparticulierType extends AbstractType
@@ -36,7 +38,7 @@ class FparticulierType extends AbstractType
                     
             ])
             
-            ->add('message',  null, [
+            ->add('message',  CKEditorType::class, [
                 
                 "attr" => [
                     "placeholder" => "Des précisions sur les contraintes de l'emplacement, les élements de taille, de superficie, etc. Un devis plus précis et une réponse plus rapide."]              
