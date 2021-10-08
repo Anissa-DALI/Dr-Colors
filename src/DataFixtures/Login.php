@@ -5,17 +5,12 @@ namespace App\DataFixtures;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
-class Admin extends Fixture
+class Login extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-      $admin = new Admin();
-
-      $admin
-        ->setLogin("")
-        ->setPassword("");
-
-
+        // $product = new Product();
+        // $manager->persist($product);
 
         $manager->flush();
     }
