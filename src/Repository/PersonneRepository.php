@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Particulier;
+use App\Entity\Personne;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Particulier|null find($id, $lockMode = null, $lockVersion = null)
- * @method Particulier|null findOneBy(array $criteria, array $orderBy = null)
- * @method Particulier[]    findAll()
- * @method Particulier[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Personne|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Personne|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Personne[]    findAll()
+ * @method Personne[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ParticulierRepository extends ServiceEntityRepository
+class PersonneRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Particulier::class);
+        parent::__construct($registry, Personne::class);
     }
 
     // /**
-    //  * @return Particulier[] Returns an array of Particulier objects
+    //  * @return Personne[] Returns an array of Personne objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class ParticulierRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Particulier
+    public function findOneBySomeField($value): ?Personne
     {
         return $this->createQueryBuilder('p')
             ->andWhere('p.exampleField = :val')

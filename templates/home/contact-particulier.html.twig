@@ -9,19 +9,21 @@
 {% block body %}
 
 <h1>{% block h1 %} Nous travaillons aussi avec les particuliers{% endblock %}<h1>
-<div class="container"> 
 
-{% form_theme form 'bootstrap_5_layout.html.twig' %}
+<br>
   
 {{ form_start(form) }}
 
-{{ form_widget(form) }}
 
+{{ form_widget(form) }}
+ 
+ 
+ 
     <input type="submit"/>
 
 {{ form_end(form) }}
 
-</div>
+
 {% endblock %}
 
 

@@ -1,11 +1,9 @@
 <?php
-
 namespace App\Controller;
-use app\Entity\Particulier;
-use App\Form\FparticulierType;
+use App\Entity\Personne;
+use App\Form\PersonneType;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Doctrine\Persistence\ObjectManager as PersistenceObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -45,28 +43,34 @@ class HomeController extends AbstractController
         ]);
     }
     #[Route('/particulier', name: 'particulier')]
-    public function particulier() :response
+    public function particulier(Request $request,) :response
  {   
-       $form = $this ->createForm(FParticulierType::class );
-             
+    $personne = new Personne();
+        dump($personne);   
+    $form = $this ->createForm(PersonneType::class,$personne  );
+       //Récupération des entrées
+       $form->handleRequest($request); 
+       if ($form->isSubmitted() && $form->isValid()) {
+              
+        // Insérer en BDD.. 
+        $manager = $this->getDoctrine()->getManager();
+        $manager->persist($personne); // réserve l'objet
+        $manager->flush(); // INSERT
+                    // Redirection vers page home
+                    $this->addFlash('success', 'Votre message a été envoyé.');
+
+                    return $this->redirectToRoute('home');
+                }
+                  
           return $this->render('home/contact-particulier.html.twig', [
             'controller_name' => 'HomeController',
+            
             'form'=>$form->createView()
         ]);
     }
-#Décommenter pour une route pro# 
-#    #[Route('/professionnel', name: 'professionnel')]
- #   public function professionnel() :response
- #{   
-     
-          #   $form = $this ->createForm(ProfessionnelType::class );
-             
-         # return $this->render('home/contact-professionel.html.twig', [
-          #  'controller_name' => 'HomeController',
-        #   'form'=>$form->createView()
-        #]);
-    #}
-  #}  
+ 
+ 
+    
   
     #[Route('/aboutus', name: 'aboutus')]
     public function aboutus(): Response

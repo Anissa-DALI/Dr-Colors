@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Dr Colors{% endblock %}
+{% block title %}Dr Colors - Réanimation murale{% endblock %}
 
 {% block description %}
 <meta name="description" content="Description de la page d'accueil">
@@ -8,5 +8,10 @@
 
 {% block body %}
 <h1 class="p-4 m-3">{% block h1 %} Bienvenue sur Dr Colors &#33; {% endblock %}<h1>
+<!--Les flashes sont des variables de session : tous les "success" affichés. Raffraichir la page pour nettoyer -->
+{% for message in app.flashes('success') %}
+ 
+<div class="alert alert-success">{{message}}</div>
+{% endfor %}
 
 {% endblock %}

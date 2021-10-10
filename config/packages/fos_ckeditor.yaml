@@ -6,8 +6,9 @@ twig:
 
 fos_ck_editor:
     configs:
-        my_config:
+        particulier_config:
             language: fr
-            toolbars:
-                 - { name: "styles", items: ['Bold', 'Italic', 'Underline', 'Blockquote', '-', 'Link', '-', 'RemoveFormat', '-', 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', '-', 'Image', '-', 'Styles', 'Format','Font','FontSize', '-', 'TextColor', 'BGColor', ]} 
+            toolbars: {name: "styles", items: ['Bold', 'Italic', 'Underline', 'Blockquote', '-', 'Link', '-', 'RemoveFormat', '-', 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', '-', 'Image', '-', 'Styles', 'Format','Font','FontSize', '-', 'TextColor', 'BGColor', ]} 
               
+
+  #nommer sa config et l'appeler dans sa page - voir symfony docs.                 
