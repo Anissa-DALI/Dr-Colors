@@ -23,9 +23,14 @@ class LoginFixture extends Fixture
 use app\src\DataFixtures\AppFixtures;
 =======
 use App\DataFixtures\AppFixtures;
+<<<<<<< HEAD
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 >>>>>>> f087724d (fixtures en cours)
+=======
+use App\DataFixtures\UserPasswordHasherInterface;
+use Symfony\Component\PasswordHasher\Hasher\MigratingPasswordHasher;
+>>>>>>> 40c45ec0 (fixture en cours)
 
 class LoginFixture extends Fixture
 {
