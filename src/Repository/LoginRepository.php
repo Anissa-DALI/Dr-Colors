@@ -5,6 +5,10 @@ namespace App\Repository;
 use App\Entity\Login;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
+
 
 /**
  * @method Login|null find($id, $lockMode = null, $lockVersion = null)

@@ -4,18 +4,23 @@ namespace App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+<<<<<<< HEAD
 use app\Entity\Login;
 <<<<<<< HEAD
 <<<<<<< HEAD
 use App\DataFixtures\AppFixtures;
 use App\DataFixtures\UserPasswordHasherInterface;
 use Symfony\Component\PasswordHasher\Hasher\MigratingPasswordHasher;
+=======
+use App\Entity\Login;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+
+>>>>>>> d7ae1b0c (fixtures login et hashage)
 
 class LoginFixture extends Fixture
 {
-    private $encoder;
 
-    public function __construct(UserPasswordHasherInterface $encoder)
+    public function __construct(UserPasswordEncoderInterface $encoder)
     {
       $this->encoder = $encoder;
     }
@@ -51,6 +56,7 @@ class LoginFixture extends Fixture
           $login->setLogin("admin@test.com");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           $login->setPassword($this->encoder->encodePassword($login));
 =======
           $login->setPassword($this->encoder->encodePassword($login, '123456'));
@@ -58,6 +64,9 @@ class LoginFixture extends Fixture
 =======
           $login->setPassword($this->encoder->encodePassword($login));
 >>>>>>> f087724d (fixtures en cours)
+=======
+          $login->setPassword($this->encoder->encodePassword($login, "123456"));
+>>>>>>> d7ae1b0c (fixtures login et hashage)
 
 
         // $product = new Product();
