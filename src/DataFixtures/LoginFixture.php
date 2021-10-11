@@ -6,8 +6,8 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use app\Entity\Login;
 use App\DataFixtures\AppFixtures;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
-
+use App\DataFixtures\UserPasswordHasherInterface;
+use Symfony\Component\PasswordHasher\Hasher\MigratingPasswordHasher;
 
 class LoginFixture extends Fixture
 {
