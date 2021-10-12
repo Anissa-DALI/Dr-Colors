@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{#inclure les Header et Footer propres à chaque page. Le Footer peut être global avec lebas#}
+
+{% block title %}{% endblock %}
+
+
+{% block description %}
+<meta name="description" content="Description de la page contact-particuliers">
+{% endblock %}
+{% block body %}
+
+
+
+{{ form_start(form) }}
+
+    {{ form_widget(form) }}
+
+    <input type="submit"/>
+
+{{ form_end(form) }}
+
+{% endblock %}

@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AdminController extends AbstractController
+class FormbController extends AbstractController
 {
-    #[Route('/admin', name: 'admin')]
+    #[Route('/formb', name: 'formb')]
     public function index(): Response
     {
-        return $this->render('admin/admin.html.twig', [
-            'controller_name' => 'AdminController',
+        return $this->render('formb/professionnel.html.twig', [
+            'controller_name' => 'FormbController',
         ]);
     }
 }

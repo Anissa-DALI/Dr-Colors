@@ -1,8 +1,6 @@
 {
-    "name": "symfony/website-skeleton",
     "type": "project",
-    "license": "MIT",
-    "description": "A skeleton to start a new Symfony website",
+    "license": "proprietary",
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
@@ -13,14 +11,14 @@
         "doctrine/annotations": "^1.0",
         "doctrine/doctrine-bundle": "^2.4",
         "doctrine/doctrine-migrations-bundle": "^3.1",
-        "doctrine/orm": "^2.9",
+        "doctrine/orm": "^2.10",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^6.1",
         "symfony/asset": "5.3.*",
         "symfony/console": "5.3.*",
         "symfony/dotenv": "5.3.*",
         "symfony/expression-language": "5.3.*",
-        "symfony/flex": "^1.3.1",
+        "symfony/flex": "^1.16",
         "symfony/form": "5.3.*",
         "symfony/framework-bundle": "5.3.*",
         "symfony/http-client": "5.3.*",
@@ -51,7 +49,7 @@
         "symfony/browser-kit": "5.3.*",
         "symfony/css-selector": "5.3.*",
         "symfony/debug-bundle": "5.3.*",
-        "symfony/maker-bundle": "^1.34",
+        "symfony/maker-bundle": "^1.0",
         "symfony/phpunit-bridge": "^5.3",
         "symfony/stopwatch": "5.3.*",
         "symfony/web-profiler-bundle": "5.3.*"
@@ -91,11 +89,7 @@
         ]
     },
     "conflict": {
-        "symfony/symfony": "*",
-        "symfony/translation": "v5.3.8",
-        "symfony/mailer": "v5.3.8",
-        "symfony/notifier": "v5.3.8",
-        "symfony/messenger": "v5.3.8"
+        "symfony/symfony": "*"
     },
     "extra": {
         "symfony": {
