@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Oeuvres Originales{% endblock %}
+
+{% block body %}
+
+{{ include('partials/header.html.twig') }}
+
+<h1 class="text-center my-5">
+	Oeuvres Originales
+</h1>
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-10">
+			<div class="row mb-3">
+				<a href="https://unsplash.it/1200/768.jpg?image=51" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+					<img src="https://unsplash.it/600.jpg?image=51" alt="img 1" class="img-fluid">
+				</a>
+				<a href="https://unsplash.it/1200/768.jpg?image=52" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+					<img src="https://unsplash.it/600.jpg?image=52" alt="img 2" class="img-fluid">
+				</a>
+				<a href="https://unsplash.it/1200/768.jpg?image=53" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+					<img src="https://unsplash.it/600.jpg?image=53" alt="img 3" class="img-fluid">
+				</a>
+			</div>
+            <div class="row mb-3">
+				<a href="https://unsplash.it/1200/768.jpg?image=54" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+					<img src="https://unsplash.it/600.jpg?image=54" alt="img 4" class="img-fluid">
+				</a>
+				<a href="https://unsplash.it/1200/768.jpg?image=55" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+					<img src="https://unsplash.it/600.jpg?image=55" alt="img 5" class="img-fluid">
+				</a>
+				<a href="https://unsplash.it/1200/768.jpg?image=56" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+					<img src="https://unsplash.it/600.jpg?image=56" alt="img 6" class="img-fluid">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
