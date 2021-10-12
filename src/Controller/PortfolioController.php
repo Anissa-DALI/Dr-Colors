@@ -8,10 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PortfolioController extends AbstractController
 {
-    #[Route('/portfolio', name: 'portfolio')]
+    #[Route('/peintures-intérieures', name: 'portfolio-intern_paint')]
     public function index(): Response
     {
-        return $this->render('portfolio/index.html.twig', [
+        return $this->render('portfolio/intern-paint.html.twig', [
             'controller_name' => 'PortfolioController',
         ]);
     }

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nos Services!{% endblock %}
+{% block title %}Nos Services{% endblock %}
 
 {% block body %}
 
@@ -9,21 +9,21 @@
 <h1 class="text-center my-5">NOS SERVICES</h1>
 
 <div class="card-deck my-5">
-	<div class="card">
+	<div class="card mx-5">
 		<img src="{{asset('/images/DrColorsheader.png')}}" class="card-img-top" alt="img-fresque-decorative">
 		<div class="card-body">
 			<h5 class="card-title">Fresque décorative</h5>
 			<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis beatae a ut recusandae tenetur rerum praesentium quidem alias quae ea, veniam nam necessitatibus numquam velit delectus corporis labore veritatis.</p>
 		</div>
 	</div>
-	<div class="card">
+	<div class="card mx-5">
 		<img src="{{asset('/images/DrColorsheader.png')}}" class="card-img-top" alt="img-art-urbain">
 		<div class="card-body">
 			<h5 class="card-title">Art Urbain</h5>
 			<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis beatae a ut recusandae tenetur rerum praesentium quidem alias quae ea, veniam nam necessitatibus numquam velit delectus corporis labore veritatis.</p>
 		</div>
 	</div>
-	<div class="card">
+	<div class="card mx-5">
 		<img src="{{asset('/images/DrColorsheader.png')}}" class="card-img-top" alt="img-oeuvres-originales">
 		<div class="card-body">
 			<h5 class="card-title">Oeuvres Originales</h5>
@@ -35,6 +35,6 @@
 <h2 class="text-center my-5">ILS NOUS ONT FAIT CONFIANCE :</h2>
 
 <div class="text-center my-5">
-<img src="https://dummyimage.com/900x400/000/fff" class="w-50 text-center"alt="logopartenaires">
+<img src="{{asset('/images/Ilsnousontfaitconfiance.png')}}" class="w-75 text-center"alt="logopartenaires">
 </div>
 {% endblock %}
