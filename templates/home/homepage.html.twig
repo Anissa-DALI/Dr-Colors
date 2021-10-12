@@ -3,13 +3,28 @@
 {% block title %}Dr Colors{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Bienvenue sur Dr Colors !</h1>
+{{ include('partials/headerhomepage.html.twig') }}
 
+<h1 class="text-center my-5">
+	Dr Colors - Réanimation murale
+</h1>
+
+<div class="container-fluid">
+    <div class="firstinfo .flex-lg-row d-flex justify-content-center d-flex flex-wrap my-5">
+        <div class="w-25 mx-5">
+            <h2>Some Text</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique molestiae alias provident iste perferendis ducimus neque, esse modi asperiores aperiam reprehenderit odio debitis eaque id tempore voluptas a placeat ullam!</p>
+        </div>
+        <img src="https://dummyimage.com/400x200/000/fff" class="" alt="imgaccueil">
+    </div>
+    <div class="firstinfo .flex-lg-row d-flex justify-content-center d-flex flex-wrap d-flex flex-row-reverse my-5">
+        <div class="w-25 mx-5">
+            <h2>Some Text</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique molestiae alias provident iste perferendis ducimus neque, esse modi asperiores aperiam reprehenderit odio debitis eaque id tempore voluptas a placeat ullam!</p>
+        </div>
+        <img src="https://dummyimage.com/400x200/000/fff" class="" alt="imgaccueil">
+    </div>
 </div>
+
 {% endblock %}
