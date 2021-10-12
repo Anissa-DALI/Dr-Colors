@@ -8,9 +8,12 @@
 
 {% block body %}
 <h1 class="p-4 m-3">{% block h1 %} Bienvenue sur Dr Colors &#33; {% endblock %}<h1>
+
+  
+
+
 <!--Les flashes sont des variables de session : tous les "success" affichés. Raffraichir la page pour nettoyer -->
-{% for message in app.flashes('success') %}
- 
+{% for message in app.flashes('success') %} 
 <div class="alert alert-success">{{message}}</div>
 {% endfor %}
 

@@ -27,19 +27,19 @@ class PersonneType extends AbstractType
             ->add('nom')
             ->add('prenom')
             ->add('telephone')
-            ->add('email', EmailType::class, [
-            'attr'=>['class'=>'form-control']])
+            ->add('email', EmailType::class,)
+            
             ->add('realisation', ChoiceType::class,[
                 'choices' => [
-                    'Exterieur' =>  'Exterieur',
-                    'Interieur' =>  'Interieur',
-                    'Special'   =>  'Special',]
+                    'Exterieur' =>  'exterieure',
+                    'Interieur' =>  'interieure',
+                    'Special'   =>  'speciale',]
                     
             ])      
             ->add('message',  TextareaType::class, [
                 
                 "attr" => [
-                    "placeholder" => "Précisez le type de réalisation (plus haut). Un devis plus précis et une réponse plus rapide."]              
+                    "placeholder" => "Indiquez le type de réalisation (plus haut). Un devis plus précis et une réponse plus rapide."]              
                  ])
             
             ->add('rgpd', CheckboxType::class,[
