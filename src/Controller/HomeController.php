@@ -14,11 +14,12 @@ class HomeController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(): Response
     {
-        return $this->render('home/homepage.html.twig', [
+        return $this->render('home/accueil.html.twig', [
             'controller_name' => 'HomeController',
         ]);
+
     }
-      
+
     #[Route('/legal', name: 'legal')]
     public function legal(): Response
     {
@@ -32,9 +33,9 @@ class HomeController extends AbstractController
         return $this->render('home/nos-services.html.twig', [
             'controller_name' => 'HomeController',
         ]);
-        
+
     }
-    
+
     #[Route('/portefolio', name: 'portefolio')]
     public function portefolio(): Response
     {
@@ -51,15 +52,15 @@ class HomeController extends AbstractController
     }
     #[Route('/particulier', name: 'particulier')]
     public function particulier(Request $request,) :response
- {   
+ {
     $personne = new Personne();
-        dump($personne);   
+        dump($personne);
     $form = $this ->createForm(PersonneType::class,$personne  );
        //Récupération des entrées
-       $form->handleRequest($request); 
+       $form->handleRequest($request);
        if ($form->isSubmitted() && $form->isValid()) {
-              
-        // Insérer en BDD.. 
+
+        // Insérer en BDD..
         $manager = $this->getDoctrine()->getManager();
         $manager->persist($personne); // réserve l'objet
         $manager->flush(); // INSERT
@@ -68,17 +69,17 @@ class HomeController extends AbstractController
 
                     return $this->redirectToRoute('home');
                 }
-                  
+
           return $this->render('home/contact-particulier.html.twig', [
             'controller_name' => 'HomeController',
-            
+
             'form'=>$form->createView()
         ]);
     }
- 
- 
-    
-  
+
+
+
+
     #[Route('/aboutus', name: 'aboutus')]
     public function aboutus(): Response
     {
@@ -86,6 +87,6 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-    
+
 
 }
