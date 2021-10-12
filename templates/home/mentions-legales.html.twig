@@ -7,19 +7,17 @@
 
 
 {% block body %}
-<h1>{% block h1 %} Mentions Légales {% endblock %}<h1>
+{{ include('partials/header.html.twig') }}
 
-<!--Juste dans Footer et/ou Intégrer au menu principal ?-->
+<h1 class="text-center my-5">Mentions légales.</h1>
 
+ <div class="text-center my-5 ">
 <h3>Un guide de rédaction.</h3>
-
-<ul>
-<li>Editeur responsable;</li>
-<li>E-commerce (quand un site l'integre);</li>
-<li>Droits d’auteur;</li>
-<li>Cookies-Traceurs;</li>
-<li>Données personnelles.</li>
-</ul>
+    <p>Editeur responsable;</p>
+	<p>E-commerce (quand un site l'integre);</p>
+	<p>Droits d’auteur;</p>
+	<p>Cookies-Traceurs;</p>
+	<p>Données personnelles.</p>
 
 <p>Indiquer que nous connaissons la réglementation.Le droit regarde le contractant, pas le site qui n'est qu'un outil.
  Il n'y a pas d'application de payement, mais il y a une transaction onéreuse proposée par une partie.
@@ -30,5 +28,8 @@ un but non lucratif c'est une association :
 <a href="https://www.legalplace.fr/guides/statuts-association-culturelle-artistique/">statut légal</a>.
  Sinon c'est le régime général pour libéraux ou entreprises. Les mentions légales de Drcolors sont à compléter dans cette esprit. Je suggère de l'ajouter dans le Footer et/ou dans le menu principal.
 </p>
+
+</div>
+
 
 {% endblock %}
