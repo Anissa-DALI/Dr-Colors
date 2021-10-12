@@ -46,7 +46,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
          return $this->login;
      }
 
-     public function setlogin(string $login): self
+     public function setLogin(string $login): self
      {
          $this->login = $login;
 
