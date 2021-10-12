@@ -1,4 +1,51 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="fr">
+  <head>
+      <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}{{title }}{% endblock %}</title>
+      {% block description %}{{description}}{% endblock %}
+       <!--CSS Bootstrap-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+      <!--Bloc CSS Twig-->
+      {% block stylesheets %}{#{{ encore_entry_link_tags('app') }}#}{% endblock %}
+      <!--Bloc CSS personalisé défini pour un affichage-->
+      <link rel="stylesheet" href="{{asset('css/main.css')}}"
+      
+      
+       
+    
+  </head>
+  <body>
+  <div id="mainHeader">
+  {{ include ('partials/header.html.twig')}}
+    <div id="mainMenu"><!--Désimbriquer les div si pb avec Menu-->
+     {{ include ('partials/menu.html.twig')}}
+     </div>
+  </div> 
+   
+  <!--marges et padding pour toutes les pages.-->
+  <div class="container p-4 m-3"> 
+  {% block body %}
+   
+  {% block h1 %} {{h1}} {% endblock %} 
+  
+  {% endblock %}
+  <div id="mainFooter">
+  {{ include ('partials/footer.html.twig')}}
+  </div>
+    
+      <!--Ordre conventionnel : JS Bootstrap puis JS Twig puis JS personnalisé-->
+      <!--JS Bootstrap-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/d7a83c074a.js" crossorigin="anonymous"></script>
+      <!--JS Twig-->
+      {% block javascripts %}{#{{ encore_entry_script_tags('app') }}#}{% endblock %}
+      <!-- Javascript  personnalisé-->
+        <script src="{{asset('js/script.js')}}"></script>
+  </div>  
+=======
 <html>
     <head>
         <meta charset="UTF-8">
@@ -41,6 +88,7 @@
             <script src="{{ asset('js/ekko.js') }}"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
       {% endblock %}
+>>>>>>> master
   </body>
 
 </html>

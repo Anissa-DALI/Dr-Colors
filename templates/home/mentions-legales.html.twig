@@ -1,37 +1,34 @@
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
 
-{% block title %}Mentions légales - Drcolors {% endblock %}
-
+{% block title %} Mentions légales - Drcolors {% endblock %}
 {% block description %}
+<meta name="description" content="Remplacer ce texte par une description que base affichera">
+ {% endblock %}
 
-<mata name="description" content="Mentions légales, CGU, une page de Drcolor qui vous dit tout.">
-
-{% endblock %}
 
 {% block body %}
+<h1>{% block h1 %} Mentions Légales {% endblock %}<h1>
 
-{% block contentlegal %}
+<!--Juste dans Footer et/ou Intégrer au menu principal ?-->
 
-<div class="container">
-  <h2>Un guide de rédaction</h2>
-  <p>Rendre accessible depuis tout le site cette page avec ces informations</p>
-  <ul>
-    <li>Editeur responsable;</li>
-    <li>E-commerce (quand un site l'integre);</li>
-    <li>Droits d’auteur;</li>
-    <li>Cookies-Traceurs;</li>
-    <li>Données personnelles.</li>
-  </ul>
-  <p>Lorem Ipsum peut suffire pour la démo, mais indiquer que nous connaissons la réglementation.<p>
-</div>
-<div>
-  <p>Le droit regarde le contractant, pas le site, un outil. peu importe qu'il y ai un outil de
-  vente sur le site, Il y  une transaction onéreuse proposée par une partie.</p>
+<h3>Un guide de rédaction.</h3>
 
-  <p>Les artistes ne sont pas considéré comme des commercants, mais il facturent. Il s'applique donc
-   les principes de l’information précontractuelle et les règles de la vente au grand
-    public (Code du Commerce (B to B) et Code de la Consommation (B to C).</p>
-</div>
-{% endblock %}
+<ul>
+<li>Editeur responsable;</li>
+<li>E-commerce (quand un site l'integre);</li>
+<li>Droits d’auteur;</li>
+<li>Cookies-Traceurs;</li>
+<li>Données personnelles.</li>
+</ul>
+
+<p>Indiquer que nous connaissons la réglementation.Le droit regarde le contractant, pas le site qui n'est qu'un outil.
+ Il n'y a pas d'application de payement, mais il y a une transaction onéreuse proposée par une partie.
+Les artistes, même en n'étant pas considérés comme commercants, facturent. Les principes de l’information précontractuelle et les règles de la vente au grand
+ public s'appliquent à eux : Code du Commerce (B to B) et Code de la Consommation (B to C).
+ Quand plusieurs personnes mutualisent leurs moyens et savoir-faire dans
+un but non lucratif c'est une association :
+<a href="https://www.legalplace.fr/guides/statuts-association-culturelle-artistique/">statut légal</a>.
+ Sinon c'est le régime général pour libéraux ou entreprises. Les mentions légales de Drcolors sont à compléter dans cette esprit. Je suggère de l'ajouter dans le Footer et/ou dans le menu principal.
+</p>
 
 {% endblock %}

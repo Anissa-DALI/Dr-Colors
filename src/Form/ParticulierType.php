@@ -21,9 +21,9 @@ class ParticulierType extends AbstractType
                     'Mme' => 2,
                     'Mlle'=> 1,
                     'Mr'  => 3,]
-                    
-            ])      
-            
+
+            ])
+
             ->add('nom')
             ->add('prenom')
             ->add('telephone')
@@ -33,12 +33,12 @@ class ParticulierType extends AbstractType
                     'Exterieur' => 1,
                     'Interieur' => 2,
                     'Special' => 3,]
-                    
+
             ])
             ->add('message',  null, [
-                
+
                 "attr" => [
-                    "placeholder" => "Des précisions sur les contraintes de l'emplacement, les élements de taille, de superficie, etc. Un devis plus précis et une réponse plus rapide."]              
+                    "placeholder" => "Des précisions sur les contraintes de l'emplacement, les élements de taille, de superficie, etc. Un devis plus précis et une réponse plus rapide."]
                  ]);
     }
 
