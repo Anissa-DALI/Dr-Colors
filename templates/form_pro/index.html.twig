@@ -2,39 +2,51 @@
 
 {% block title %}Formulaire professionnel{% endblock %}
 
-{% block body %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
 
+{% block body %}
+   
     {{ form_start(form) }}
+
         {{ form_label   (form.societe_name) }}
+        {{ form_errors  (form.societe_name) }}
         {{ form_widget  (form.societe_name) }}
    
         {{ form_label   (form.adresse) }}
+        {{ form_errors  (form.adresse) }}
         {{ form_widget  (form.adresse) }}
 
         {{ form_label   (form.code_postal) }}
+        {{ form_errors  (form.code_postal) }}
         {{ form_widget  (form.code_postal) }}
 
         {{ form_label   (form.ville) }}
+        {{ form_errors  (form.ville) }}
         {{ form_widget  (form.ville) }}
 
         {{ form_label   (form.accessibilite) }}
+        {{ form_errors  (form.accessibilite) }}
         {{ form_widget  (form.accessibilite) }}
 
         {{ form_label   (form.etat_mur) }}
+        {{ form_errors  (form.etat_mur) }}
         {{ form_widget  (form.etat_mur) }}
 
         {{ form_label   (form.superficie) }}
+        {{ form_errors  (form.superficie) }}
         {{ form_widget  (form.superficie) }}
 
         {{ form_label   (form.hauteur_max) }}
+        {{ form_errors  (form.hauteur_max) }}
         {{ form_widget  (form.hauteur_max) }}
 
         {{ form_label   (form.telecharger_photo) }}
+        {{ form_errors  (form.telecharger_photo) }}
         {{ form_widget  (form.telecharger_photo) }}
+        {# {{ form_row     (form.telecharger_photo) }} #}
 
         {{ form_rest    (form) }}
-
-        <button type="submit">Enregistrer</button>
+       
 
     {{ form_end (form) }}
 

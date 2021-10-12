@@ -3,7 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Professionnels;
+use App\Entity\Comment;
+use App\Controller\SluggerInterface;
+use App\Controller\FileException;
 use App\Form\FormProType;
+use App\Form\CommentFormType;
 use ContainerE4ZmX7x\getForm_Type_FormService;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -17,17 +21,19 @@ use Symfony\Component\HttpFoundation\Request;
 
 
 
+
+
     class FormProController extends AbstractController
     {
         #[Route('/form/pro', name: 'form_pro')]
 
         public function index(Request $request, EntityManagerInterface $entityManager): Response
         {
-            $professionnels = new Professionnels ();
+            $professionnels = new Professionnels ('null');
 
             $form = $this -> createForm(FormProType::class, $professionnels);
+            
             $form->handleRequest($request);
-
             if ($form->isSubmitted() && $form->isValid()){
             $entityManager->persist($professionnels);
             $entityManager->flush();
@@ -36,32 +42,44 @@ use Symfony\Component\HttpFoundation\Request;
             return $this->render('form_pro/index.html.twig', [
                 'form' => $form->createView(),
             ]);
-        }
+        ;   
+
     }
 
+    #[Route('/form/pro/telecharger', name: 'telecharger_photo')]
+  
+    public function new(Request $request, SluggerInterface $slugger)
+    {
+        $download = new Download (null);
+        $form = $this->createForm(ProductType::class, $download);
+        $form->handleRequest($request);
 
-// class FormProController extends AbstractType 
-// {
-//     #[Route('/form/pro', name: 'form_pro')]
-    
-//     public function buildForm(FormBuilderInterface $builder, array $options)
-//     {
-//         $builder
-//             -> add('societe_name') 
-//             -> add('adresse')
-//             -> add('code_postal') 
-//             -> add('ville') 
-//             -> add('accessibilite') 
-//             -> add('etat_mur') 
-//             -> add('superficie') 
-//             -> add('hauteur_max') 
-//             -> add('telecharger_photo');   
-//     }
+        if ($form->isSubmitted() && $form->isValid()) {
 
-//     public function configureOptions(OptionsResolver $resolver)
-//     {
-//         $resolver->setDefaults([
-//             'data_class' => FormPro::class,
-//         ]);   
-//     }
-// }
+            /** @var UploadedFile $telecharger_photo */
+
+            $download = $form->get('telecharger_photo')->getData();
+
+            if ($telecharger_photo) {
+                $originalFilename = pathinfo($telecharger_photo->getClientOriginalName(), PATHINFO_FILENAME);
+                
+                $safeFilename = $slugger->slug($originalFilename);
+
+                
+                // try {
+                //     $telecharger_photo->move(
+                //         $this->getParameter('download_directory'),
+                //     );
+                // }
+                // catch {
+
+                // };
+            
+        
+
+        return $this->render('form_pro/index.html.twig', [
+            'form' => $form->createView(),
+
+        ]);
+    }
+}}}

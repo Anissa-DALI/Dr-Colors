@@ -4,11 +4,13 @@ namespace App\Entity;
 
 use App\Repository\ProfessionnelsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use PhpParser\Comment;
 
 /**
  * @ORM\Entity(repositoryClass=ProfessionnelsRepository::class)
  */
-class Professionnels
+class Professionnels extends Comment
 {
     /**
      * @ORM\Id
@@ -19,46 +21,55 @@ class Professionnels
 
     /**
      * @ORM\Column(type="string", length=255)
+     * #[Assert\NotBlank]
      */
     private $societe_name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * #[Assert\NotBlank]
      */
     private $adresse;
 
     /**
      * @ORM\Column(type="integer")
+     * #[Assert\NotBlank]
      */
     private $code_postal;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * #[Assert\NotBlank]
      */
     private $ville;
 
     /**
      * @ORM\Column(type="text")
+     * #[Assert\NotBlank]
      */
     private $accessibilite;
 
     /**
      * @ORM\Column(type="text")
+     * #[Assert\NotBlank]
      */
     private $etat_mur;
 
     /**
      * @ORM\Column(type="integer")
+     * #[Assert\NotBlank]
      */
     private $superficie;
 
     /**
      * @ORM\Column(type="integer")
+     * #[Assert\NotBlank]
      */
     private $hauteur_max;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * #[Assert\Image]
      */
     private $telecharger_photo;
 
