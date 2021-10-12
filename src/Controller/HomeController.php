@@ -42,6 +42,13 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    #[Route('/cgv', name: 'cgv')]
+    public function cgv(): Response
+    {
+        return $this->render('home/cgv.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
     #[Route('/particulier', name: 'particulier')]
     public function particulier(Request $request,) :response
  {   
