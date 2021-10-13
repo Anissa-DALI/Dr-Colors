@@ -1,9 +1,4 @@
-{# backgroundimage #}
-<header>
-	<div class="navbarimage">
-		<img
-		src="{{asset('/images/DrColorsheader.png')}}" class="w-100" alt="BackgroundimageDrcolors2">
-		{# navbar #}
+{# navbar #}
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand" href="{{ path('home')}}">
 				<img src="{{asset('/images/logodrcolors-removebg-preview2.png')}}" alt="logodrcolors">
@@ -26,20 +21,19 @@
 							<a class="dropdown-item" href="{{ path('portfolio-intern_paint') }}">Peintures intérieures</a>
 							<a class="dropdown-item" href="{{ path('peintures_ext') }}">Peintures extérieures</a>
 							<a class="dropdown-item" href="{{ path('oeuvres_originales') }}">Oeuvres originales</a>
-							<li class="nav-item">
-								<a class="nav-link" href="">CONTACT</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="{{ path('a_propos') }}">A PROPOS</a>
-							</li>
+						<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							CONTACT
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="{{ path('particulier') }}">Particulier</a>
+							<a class="dropdown-item" href="{{ path('form_pro') }}">Professionnel</a>
+							
+						<li class="nav-item">
+							<a class="nav-link" href="{{path('apropos')}}">&Agrave; propos</a>
+						</li>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</nav>
-	</div>
-</header>
-
-
-
-

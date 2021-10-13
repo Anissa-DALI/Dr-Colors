@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Professionnels;
 use App\Entity\Comment;
 use App\Controller\SluggerInterface;
+use App\Controller\Download;
 use App\Controller\FileException;
 use App\Form\FormProType;
 use App\Form\CommentFormType;

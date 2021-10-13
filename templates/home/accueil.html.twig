@@ -1,18 +1,14 @@
 {% extends 'base.html.twig' %}
-{#inclure les Header et Footer propres à chaque page. Le Footer peut être global avec lebas#}
-
-
 {% block title %}Accueil - Drcolors{% endblock %}
 {% block description %}
 <meta name="description" content="Description de la page d'accueil">
 {% endblock %}
 
 {% block body %}
-
-{{include('partials/headerhomepage.html.twig')}}
-
+{{include('partial/carousel.html.twig')}}
+{{include('partial/menu.html.twig')}}
 <h1 class="text-center my-5">
-	Dr Colors - Réanimation murale
+{% block h1 %} Dr Colors - Réanimation murale {% endblock %}
 </h1>
 
 <div class="container-fluid">
@@ -31,5 +27,4 @@
         <img src="https://dummyimage.com/400x200/000/fff" class="" alt="imgaccueil">
     </div>
 </div>
-
 {% endblock %}
