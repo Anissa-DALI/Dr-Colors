@@ -1,14 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Peintures Intérieures{% endblock %}
+{% block title %} Peintures Intérieures {% endblock %}
+{% block description %}{% endblock %}
+
 
 {% block body %}
-
-{{ include('partials/header.html.twig') }}
-
-<h1 class="text-center my-5">
-	Peintures Intérieures
-</h1>
+{{include('partial/header.html.twig')}}
+<h1 class="text-center my-5"> {% block h1 %}Peintures Intérieures {% endblock %} </h1>
 
 <div class="container">
 	<div class="row justify-content-center">

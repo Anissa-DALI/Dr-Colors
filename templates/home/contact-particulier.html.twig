@@ -5,13 +5,11 @@
 <mata name="description" content="Formulaire de contact - Particuliers - Drcolors">
  {% endblock %}
   
+{% block body %}  
+{{include('partial/header.html.twig')}}
+<div class="container">
+<h1 class=" bg-warning text-center text-white ">{% block h1 %} Nous travaillons avec les particuliers{% endblock %}<h1>
 
-{% block body %}
-
-<h1 class=" p-2 m-2 bg-warning text-center text-white ">{% block h1 %} Nous travaillons avec les particuliers{% endblock %}<h1>
-
-<br>
-  
 {{form_start(form)}}
 
 <!--Les div pour le css -->
@@ -21,20 +19,18 @@
   <div>{{form_row(form.telephone)}}</div>
   
   <div>{{form_row(form.email)}}</div>
-  <p class="leader"> Le devis concerne</p>
+  <h3 > Le devis concerne</h3>
   <div>{{form_row(form.realisation)}}</div>
   <div {{form_row(form.message)}}</div>
   
-  <div class="form-control-lg"> {{form_row(form.rgpd)}}</div>
+  <div class="form-control-lg d-flex justify-content-center"> {{form_row(form.rgpd)}}</div>
 
-  <div class="p-4 m-3" class="d-grid gap-3 d-md-block  ">
+  <div class="d-flex justify-content-center" class="d-grid gap-3 d-md-block  ">
   <button class="btn-lg btn-success " type="submit">Envoyer</button>
   <button class="btn-lg btn-success" type="reset">Effacer</button>
-
   
 {{form_end(form)}}
 </div>
-
 {% endblock %}
 
 

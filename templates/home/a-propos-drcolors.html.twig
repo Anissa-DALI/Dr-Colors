@@ -1,10 +1,17 @@
 {% extends 'base.html.twig' %}
 {#inclure les Header et Footer propres à chaque page. Le Footer peut être global avec lebas#}
 
-
 {% block title %}&Agrave; propos de Drcolors{% endblock %}
 {% block description %}
 <meta name="description" content="Tout ou presque sur les membres de l'aventure Drcolor"> 
 {% endblock %}
 
-{% block body %}{% endblock %}
+{% block body %}
+{{include('partial/header.html.twig')}}
+<div class="container">
+<h1>{% block h1 %}&Agrave; propos d'un duo d'artistes{% endblock %}</h1>
+<p class="leader">Dans cette page, il est préférable de ne garder que l'aspect intimiste.
+ L'histoire de deux gars passionés par leur art...La photo du site est pas mal. Les articles de presse, les
+  références sont à  déplacer dans la page nos services de la démo.</p>
+</div>
+{% endblock %}
