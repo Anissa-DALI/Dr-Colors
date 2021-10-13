@@ -5,10 +5,13 @@ namespace App\Entity;
 use App\Repository\ProfessionnelsRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\File;
 use PhpParser\Comment;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ProfessionnelsRepository::class)
+ * @Vich\Uploadable
  */
 class Professionnels extends Comment
 {
@@ -69,6 +72,7 @@ class Professionnels extends Comment
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @ORM\OneToOne(targetEntity=Image::class, cascade={"persist", "remove"})
      * #[Assert\Image]
      */
     private $telecharger_photo;

@@ -13,45 +13,91 @@
    
     {{ form_start(form) }}
 
+    <div class="form-row">
+    <div class="form-group">
+    <label for="inputSocietyName">Nom de votre société</label>
+    <input type="text" class="form-control" id="SocietyName" placeholder="Nom de votre société">
         {{ form_label   (form.societe_name) }}
         {{ form_errors  (form.societe_name) }}
-        {{ form_widget  (form.societe_name) }}
-   
+
+
+    <div class="form-row">
+   <div class="form-group col-md-6">
+   <label for="inputAddress">Adresse</label>
+   <input type="text" class="form-control" id="inputAddress" placeholder="Votre adresse">
         {{ form_label   (form.adresse) }}
         {{ form_errors  (form.adresse) }}
-        {{ form_widget  (form.adresse) }}
+     </div>
 
+    <div class="form-group col-md-2">
+    <label for="inputZip">Code Postal</label>
+    <input type="text" class="form-control" id="inputZip" placeholder="Votre code postal">
         {{ form_label   (form.code_postal) }}
         {{ form_errors  (form.code_postal) }}
-        {{ form_widget  (form.code_postal) }}
-
+    </div>
+    
+    <div class="form-group col-md-4">
+    <label for="inputCity">Ville</label>
+    <input type="text" class="form-control" id="inputCity" placeholder="Votre ville">
         {{ form_label   (form.ville) }}
         {{ form_errors  (form.ville) }}
-        {{ form_widget  (form.ville) }}
+    </div>
 
+    <div class="form-group">
+    <label for="inputAccessibility">Accessibilité du chantier</label>
+    <input type="text" class="form-control" id="inputAccessibilite" placeholder="Veuillez décrire l'accessibilite du chantier...">
         {{ form_label   (form.accessibilite) }}
         {{ form_errors  (form.accessibilite) }}
-        {{ form_widget  (form.accessibilite) }}
+     </div>
 
+    <div class="form-group">
+    <label for="inputState">Etat du mur</label>
+    <input type="text" class="form-control" id="inputState" placeholder="Veuillez décrire les défauts potentiels de votre mur...">
         {{ form_label   (form.etat_mur) }}
         {{ form_errors  (form.etat_mur) }}
-        {{ form_widget  (form.etat_mur) }}
+    </div>
 
+    <div class="form-group col-md-6">
+   <label for="inputSuperficy">Superficie</label>
+   <input type="text" class="form-control" id="inputSuperficy" placeholder="Veuillez indiquer la superficie de votre mur">
         {{ form_label   (form.superficie) }}
         {{ form_errors  (form.superficie) }}
-        {{ form_widget  (form.superficie) }}
+   </div> 
 
+    <div class="form-group col-md-6">
+   <label for="inputHigh">Superficie</label>
+   <input type="text" class="form-control" id="inputHigh" placeholder="Veuillez indiquer la hauteur max de votre mur">
         {{ form_label   (form.hauteur_max) }}
         {{ form_errors  (form.hauteur_max) }}
-        {{ form_widget  (form.hauteur_max) }}
+    </div>
 
+    <div class="item-wrapper one">
+    <div class="item">
+        <form data-validation="true" action="#" method="post" enctype="multipart/form-data">
+            <div class="item-inner">
+                <div class="item-content">
+                    <div class="image-upload"> <label style="cursor: pointer;" for="file_upload"> <img src="" alt="" class="uploaded-image">
+                            <div class="h-100">
+                                <div class="dplay-tbl">
+                                    <div class="dplay-tbl-cell"> <i class="fa fa-cloud-upload"></i>
+                                        <h5><b>Choisissez votre image à télécharger</b></h5>
+                                        <h6 class="mt-10 mb-70">OU Glissez votre image ici </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--upload-content--> <input data-required="image" type="file" name="image_name" id="file_upload" class="image-input" data-traget-resolution="image_resolution" value="">
+                        </label> </div>
+                </div>
+                <!--item-content-->
+            </div>
+            <!--item-inner-->
         {{ form_label   (form.telecharger_photo) }}
         {{ form_errors  (form.telecharger_photo) }}
-        {{ form_widget  (form.telecharger_photo) }}
-        {# {{ form_row     (form.telecharger_photo) }} #}
+        <img src="{{ vich_uploader_asset(person, 'imageFile') }}" width="50px">
 
         {{ form_rest    (form) }}
-       
+    </div>
+  </div>       
 
     {{ form_end (form) }}
    </div>
