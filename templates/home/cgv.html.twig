@@ -7,7 +7,8 @@
   
 
 {% block body %}
-<div class="container p-4 m-3">
+{{include('partial/header.html.twig')}}
+<div class="container">
 <h1 class="bg-warning text-center text-white">{% block h1 %} CGV - Drcolors{% endblock %}<h1>
 <h3>Info</h3>
 <p>La publication des CGV n’est pas un préalable à la transaction, mais le  professionnel doit savoir qu’ il y a  une obligation de communication en B to B à la demande du partenaire.
