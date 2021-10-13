@@ -2,7 +2,9 @@
 
 namespace App\Form;
 
+use App\Entity\ImageType;
 use App\Entity\Professionnels;
+use App\Form\ImageType as FormImageType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -11,6 +13,10 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Validator\Constraints\Image;
 use Symfony\Component\Validator\Constraints\ImageValidator;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Vich\UploaderBundle\Form\Type\VichImageType;
+
+
 
 
 class FormProType extends AbstractType
@@ -30,22 +36,7 @@ class FormProType extends AbstractType
             ->add('etat_mur')
             ->add('superficie')
             ->add('hauteur_max')
-            ->add('telecharger_photo', FileType::class, [
-                'label' => 'Telecharger photo',
-
-                'mapped' => false,
-                'required' => false,
-                'constraints' => [
-                    new File([
-                        'maxSize' => '1024k',
-                        'mimeTypes' => [
-                            'application/pdf',
-                            'application/x-pdf',
-                        ],
-                        'mimeTypesMessage' => 'Please upload a valid PDF document',
-                    ])
-                ],
-            ])
+            ->add('telechager_photo', FormImageType::class)
             ->add('submit', SubmitType::class, [
                 'label' => 'Envoyer votre demande'
             ])
