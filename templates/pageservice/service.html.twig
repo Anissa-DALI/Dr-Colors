@@ -1,12 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nos Services{% endblock %}
+{% block title %}Nos Services - Drcolors{% endblock %}
+{% block description %}{% endblock %}
 
 {% block body %}
-
-{{ include('partials/header.html.twig') }}
-
-<h1 class="text-center my-5">NOS SERVICES</h1>
+<div class="container p-4 m-3">
+<h1 class="text-center my-5">{% block h1 %}Nos services{% endblock %}</h1>
 
 <div class="card-deck my-5">
 	<div class="card mx-5">
@@ -36,5 +35,6 @@
 
 <div class="text-center my-5">
 <img src="{{asset('/images/Ilsnousontfaitconfiance.png')}}" class="w-75 text-center"alt="logopartenaires">
+</div>
 </div>
 {% endblock %}
