@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bonjour administrateur !{% endblock %}
+
+{% block body %}
+{{include('partial/header.html.twig')}}
+
+{{dump(userPar)}}
+
+{{dump(userPro)}}
+
+{% endblock %}
