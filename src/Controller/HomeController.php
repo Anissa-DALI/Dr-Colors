@@ -5,6 +5,8 @@ use App\Form\PersonneType;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Comment;
+use App\Controller\SluggerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,6 +33,14 @@ class HomeController extends AbstractController
     public function services(): Response
     {
         return $this->render('home/nos-services.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+
+    }
+    #[Route('/apropos', name: 'apropos')]
+    public function apropos(): Response
+    {
+        return $this->render('home/a-propos-drcolors.html.twig', [
             'controller_name' => 'HomeController',
         ]);
 
@@ -67,24 +77,13 @@ class HomeController extends AbstractController
                     // Redirection vers page home
                     $this->addFlash('success', 'Votre message a été envoyé.');
 
-                    return $this->redirectToRoute('home');
+                    return $this->redirectToRoute('particulier');
                 }
 
           return $this->render('home/contact-particulier.html.twig', [
             'controller_name' => 'HomeController',
 
             'form'=>$form->createView()
-        ]);
-    }
-
-
-
-
-    #[Route('/aboutus', name: 'aboutus')]
-    public function aboutus(): Response
-    {
-        return $this->render('home/a-propos.html.twig', [
-            'controller_name' => 'HomeController',
         ]);
     }
 
