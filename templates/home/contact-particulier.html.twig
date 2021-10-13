@@ -6,7 +6,8 @@
  {% endblock %}
   
 {% block body %}  
-<div class="container p-4 m-3">
+{{include('partial/header.html.twig')}}
+<div class="container">
 <h1 class=" bg-warning text-center text-white ">{% block h1 %} Nous travaillons avec les particuliers{% endblock %}<h1>
 
 {{form_start(form)}}

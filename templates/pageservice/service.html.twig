@@ -4,7 +4,8 @@
 {% block description %}{% endblock %}
 
 {% block body %}
-<div class="container p-4 m-3">
+{{include('partial/header.html.twig')}}
+<div class="container">
 <h1 class="text-center my-5">{% block h1 %}Nos services{% endblock %}</h1>
 
 <div class="card-deck my-5">

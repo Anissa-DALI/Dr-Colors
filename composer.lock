@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "80a99923c5d33e64131ecfaeeee39677",
-=======
     "content-hash": "3ff25e125d3983f7eac84db3460f8e08",
->>>>>>> Danny
     "packages": [
         {
             "name": "api-platform/core",
@@ -1676,8 +1672,6 @@
                 }
             ],
             "time": "2021-10-11T09:18:27+00:00"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "fig/link-util",
@@ -1739,7 +1733,6 @@
                 "source": "https://github.com/php-fig/link-util/tree/1.2.0"
             },
             "time": "2021-03-11T23:09:19+00:00"
->>>>>>> Danny
         },
         {
             "name": "friendsofphp/proxy-manager-lts",
