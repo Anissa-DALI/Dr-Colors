@@ -22,8 +22,9 @@ class PersonneType extends AbstractType
                     'Mme' => 'Mme',
                     'Mlle'=> 'Mlle',
                     'Mr'  => 'Monsieur',]
-                    
-            ])      
+                         
+            ])     
+             
             ->add('nom')
             ->add('prenom')
             ->add('telephone')
@@ -47,7 +48,7 @@ class PersonneType extends AbstractType
                  
         ;
     }
-
+    
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
