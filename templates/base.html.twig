@@ -25,9 +25,11 @@
 
   <body>
 
-      {% block body %}{% endblock %}
+      {% block body %}
 
-      {{ include('partial/footer.html.twig') }}
+      {% endblock %}
+
+      {{include('partial/footer.html.twig')}}
 
       {% block javascripts %}
           {#{{ encore_entry_script_tags('app') }}#}
