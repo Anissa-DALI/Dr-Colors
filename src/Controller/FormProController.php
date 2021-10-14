@@ -40,7 +40,6 @@ class FormProController extends AbstractController
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()){
-                $imageFile = $form -> get('imageFile') -> getData();
             $entityManager->persist($professionnels);
             $entityManager->flush();
 
