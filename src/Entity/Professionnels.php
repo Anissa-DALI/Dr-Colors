@@ -24,56 +24,47 @@ class Professionnels extends Comment
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $societe_name;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $adresse;
 
     /**
-     * @ORM\Column(type="integer")
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $code_postal;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ville;
 
     /**
-     * @ORM\Column(type="text")
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="text", nullable=true)
      */
     private $accessibilite;
 
     /**
-     * @ORM\Column(type="text")
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="text", nullable=true)
      */
     private $etat_mur;
 
     /**
-     * @ORM\Column(type="integer")
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $superficie;
 
     /**
-     * @ORM\Column(type="integer")
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $hauteur_max;
 
     /**
      * @ORM\OneToOne(targetEntity=Image::class, cascade={"persist", "remove"})
-     * #[Assert\Image]
      */
     private $telecharger_photo;
 

@@ -5,58 +5,21 @@
 {% form_theme form 'bootstrap_5_layout.html.twig' %}
 
 {% block body %}
+
 {{include('partial/header.html.twig')}}
     <h1 class="text-center my-5">
 	Formulaire Professionnel</h1>
 
    <div class="container">
    
-    {{ form_start(form) }}
-
-    <div class="form-row">
-    <div class="form-group">
-    
-        {{ form_label   (form.societe_name) }}
-        {{ form_errors  (form.societe_name) }}
-
-
-        {{ form_label   (form.adresse) }}
-        {{ form_errors  (form.adresse) }}
-
-
-        {{ form_label   (form.code_postal) }}
-        {{ form_errors  (form.code_postal) }}
-
-
-        {{ form_label   (form.ville) }}
-        {{ form_errors  (form.ville) }}
-    <
-
-        {{ form_label   (form.accessibilite) }}
-        {{ form_errors  (form.accessibilite) }}
-
-  
-        {{ form_label   (form.etat_mur) }}
-        {{ form_errors  (form.etat_mur) }}
-
    
-        {{ form_label   (form.superficie) }}
-        {{ form_errors  (form.superficie) }}
-
-    
-        {{ form_label   (form.hauteur_max) }}
-        {{ form_errors  (form.hauteur_max) }}
-
-    
-        {{ form_label   (form.telecharger_photo) }}
-        {{ form_errors  (form.telecharger_photo) }}
+    {{ form_start(form) }}
         
 
-        {{ form_rest    (form) }}
-    </div>
-  </div>       
+    {{ form_rest    (form) }}
+          
 
     {{ form_end (form) }}
-   </div>
+    </div>
 
 {% endblock %}
