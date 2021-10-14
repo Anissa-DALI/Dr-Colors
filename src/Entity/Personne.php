@@ -46,6 +46,11 @@ class Personne
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $realisation;
+    
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $ville;
 
     /**
      * @ORM\Column(type="text")
@@ -133,6 +138,21 @@ class Personne
 
         return $this;
     }
+
+    
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(string $ville): self
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+ 
+    
 
     public function getMessage(): ?string
     {

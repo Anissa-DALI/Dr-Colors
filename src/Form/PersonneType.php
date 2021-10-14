@@ -8,6 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -18,7 +19,8 @@ class PersonneType extends AbstractType
         $builder
              
         ->add('civilites', ChoiceType::class,[
-                'choices' => [
+            'label'=>'Civilités',    
+            'choices' => [
                     'Mme' => 'Mme',
                     'Mlle'=> 'Mlle',
                     'Mr'  => 'Monsieur',]
@@ -26,21 +28,30 @@ class PersonneType extends AbstractType
             ])     
              
             ->add('nom')
-            ->add('prenom')
-            ->add('telephone')
+            ->add('prenom', null, [
+                'label'=>'Prénom'
+            ])
+            ->add('telephone',null, [
+              'label'=>'Téléphone'  
+            ])
             ->add('email', EmailType::class,)
             
             ->add('realisation', ChoiceType::class,[
+                'label'=>'Réalisation',
                 'choices' => [
-                    'Exterieur' =>  'exterieure',
-                    'Interieur' =>  'interieure',
-                    'Special'   =>  'speciale',]
+                    'En Exterieur' =>  'exterieur',
+                    'En Interieur' =>  'interieur',
+                    'Complexe'     =>  'complexe',]
                     
-            ])      
+            ])  
+            ->add('ville',TextType::class,[
+                "attr" => [
+                    "placeholder" => "Indiquer la commune ou la ville de réalisation."] 
+            ])    
             ->add('message',  TextareaType::class, [
                 
                 "attr" => [
-                    "placeholder" => "Indiquez le type de réalisation (plus haut). Un devis plus précis et une réponse plus rapide."]              
+                    "placeholder" => "Indiquer le type de réalisation (plus haut) permet un devis plus précis et une réponse rapide."]              
                  ])
             
             ->add('rgpd', CheckboxType::class,[
