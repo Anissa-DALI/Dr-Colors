@@ -11,6 +11,7 @@ use Symfony\Config\VichUploaderConfig;
 
 /**
  * @ORM\Entity(repositoryClass=ImageRepository::class)
+ * @ORM\Table(name="image")
  * @Vich\Uploadable
  */
 class Image

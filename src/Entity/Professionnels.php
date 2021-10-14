@@ -8,6 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\File;
 use PhpParser\Comment;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use App\Entity\Image;
 
 /**
  * @ORM\Entity(repositoryClass=ProfessionnelsRepository::class)
@@ -71,11 +72,11 @@ class Professionnels extends Comment
     private $hauteur_max;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
      * @ORM\OneToOne(targetEntity=Image::class, cascade={"persist", "remove"})
      * #[Assert\Image]
      */
     private $telecharger_photo;
+
 
     public function getId(): ?int
     {
@@ -178,14 +179,26 @@ class Professionnels extends Comment
         return $this;
     }
 
-    public function getTelechargerPhoto(): ?string
+    public function getTelechargerPhoto(): ? string 
     {
         return $this->telecharger_photo;
     }
 
-    public function setTelechargerPhoto(?string $telecharger_photo): self
+    public function setTelechargerPhoto($telecharger_photo)
     {
         $this->telecharger_photo = $telecharger_photo;
+
+        return $this;
+    }
+
+    public function getImage(): ?image
+    {
+        return $this->image;
+    }
+
+    public function setImage(?image $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
