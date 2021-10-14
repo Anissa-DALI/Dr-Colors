@@ -40,11 +40,7 @@ class HomeController extends AbstractController
     #[Route('/apropos', name: 'apropos')]
     public function apropos(): Response
     {
-<<<<<<< HEAD
         return $this->render('a_propos/A-propos.html.twig', [
-=======
-        return $this->render('home/a-propos-drcolors.html.twig', [
->>>>>>> 572bce5edc6caa9a8266f428d07a33af1d2bbf03
             'controller_name' => 'HomeController',
         ]);
 
@@ -91,8 +87,4 @@ class HomeController extends AbstractController
         ]);
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 572bce5edc6caa9a8266f428d07a33af1d2bbf03
 }
