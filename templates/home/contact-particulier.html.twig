@@ -7,14 +7,14 @@
   
 {% block body %}  
 {{include('partial/header.html.twig')}}
+<h1 class="text-center my-5">
+	Formulaire Particuliers</h1>
 <div class="container">
-<h1 class=" bg-warning text-center text-white ">{% block h1 %} Nous travaillons avec les particuliers{% endblock %}<h1>
-
 {{form_start(form)}}
 
 <!--Les div pour le css -->
-  <div >{{form_row(form.civilites)}}</div>
-  <div >{{form_row(form.nom)}}</div>
+  <div>{{form_row(form.civilites)}}</div>
+  <div>{{form_row(form.nom)}}</div>
   <div> {{form_row(form.prenom)}}</div>
   <div>{{form_row(form.telephone)}}</div>
   
@@ -23,9 +23,9 @@
   <div>{{form_row(form.realisation)}}</div>
   <div {{form_row(form.message)}}</div>
   
-  <div class="form-control-lg"> {{form_row(form.rgpd)}}</div>
+  <div class="form-control-lg d-flex justify-content-center"> {{form_row(form.rgpd)}}</div>
 
-  <div class="p-4 m-3" class="d-grid gap-3 d-md-block  ">
+  <div class="d-flex justify-content-center" class="d-grid gap-3 d-md-block  ">
   <button class="btn-lg btn-success " type="submit">Envoyer</button>
   <button class="btn-lg btn-success" type="reset">Effacer</button>
   
