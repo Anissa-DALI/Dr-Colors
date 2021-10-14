@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Image;
 use App\Repository\ImageTypeRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Form\AbstractType;
@@ -9,6 +10,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
 
 
 class ImageType extends AbstractType
@@ -32,7 +35,16 @@ class ImageType extends AbstractType
             ])
         ],
     ]);
+    
+}
+    
 
+    public function configureOptions(OptionsResolver $resolver): void
+
+    {
+        $resolver->setDefaults([
+            'data_class' => Image::class,
+        ]);
     }
 
     
