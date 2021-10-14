@@ -13,7 +13,10 @@ return [
     Symfony\Bundle\SecurityBundle\SecurityBundle::class => ['all' => true],
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
     Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
+<<<<<<< HEAD
     Nelmio\CorsBundle\NelmioCorsBundle::class => ['all' => true],
+=======
+>>>>>>> 572bce5edc6caa9a8266f428d07a33af1d2bbf03
     FOS\CKEditorBundle\FOSCKEditorBundle::class => ['all' => true],
     Nelmio\CorsBundle\NelmioCorsBundle::class => ['all' => true],
 ];

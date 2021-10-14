@@ -2,7 +2,10 @@ $(document).on('click', '[data-toggle="lightbox"]', function (event) {
     event.preventDefault();
     $(this).ekkoLightbox();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 572bce5edc6caa9a8266f428d07a33af1d2bbf03
 
 
     // API formulaires
@@ -43,4 +46,7 @@ $(document).on('click', '[data-toggle="lightbox"]', function (event) {
       });
     });
 });
+<<<<<<< HEAD
 >>>>>>> 4e571da (maj)
+=======
+>>>>>>> 572bce5edc6caa9a8266f428d07a33af1d2bbf03
