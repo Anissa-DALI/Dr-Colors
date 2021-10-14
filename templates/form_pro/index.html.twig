@@ -1,10 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Formulaire professionnel{% endblock %}
+{% block title %}Contactez-nous - Professionnel - Drcolors {% endblock %}
 
 {% form_theme form 'bootstrap_5_layout.html.twig' %}
 
 {% block body %}
+{{include('partial/header.html.twig')}}
+    <h1 class="text-center my-5">
+	Formulaire Professionnel</h1>
+
+   <div class="container">
    
     {{ form_start(form) }}
 
@@ -49,5 +54,6 @@
        
 
     {{ form_end (form) }}
+   </div>
 
 {% endblock %}
