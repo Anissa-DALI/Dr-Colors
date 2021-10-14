@@ -2,7 +2,6 @@
 
 namespace App\Repository;
 
-use App\Entity\UseContent;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use App\Entity\Particulier;
@@ -14,11 +13,11 @@ use App\Entity\Professionnels;
  * @method UseContent[]    findAll()
  * @method UseContent[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class UseContentRepository extends ServiceEntityRepository
+class UserContentRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, UseContent::class);
+        parent::__construct($registry, UserContent::class);
     }
 
     // /**
