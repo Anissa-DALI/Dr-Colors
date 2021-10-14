@@ -32,7 +32,7 @@ class HomeController extends AbstractController
     #[Route('/services', name: 'services')]
     public function services(): Response
     {
-        return $this->render('home/nos-services.html.twig', [
+        return $this->render('pageservice/service.html.twig', [
             'controller_name' => 'HomeController',
         ]);
 
