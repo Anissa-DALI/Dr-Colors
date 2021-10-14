@@ -2,7 +2,11 @@ $(document).ready(function(){
 	const apiUrl = 'https://geo.api.gouv.fr/communes?codePostal=';
 	const format = '&format=json';
 
-	let zipcode = $('#zipcode'); let city = $('#city'); let errorMessage = $('#error-message');
+	let zipcode = $('#zipcode');
+
+	let city = $('#city');
+
+	let errorMessage = $('#error-message');
 
 	$(zipcode).on('blur', function(){
 		let code = $(this).val();
