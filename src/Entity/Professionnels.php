@@ -5,10 +5,14 @@ namespace App\Entity;
 use App\Repository\ProfessionnelsRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\File;
 use PhpParser\Comment;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use App\Entity\Image;
 
 /**
  * @ORM\Entity(repositoryClass=ProfessionnelsRepository::class)
+ * @Vich\Uploadable
  */
 class Professionnels extends Comment
 {
@@ -20,58 +24,50 @@ class Professionnels extends Comment
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $societe_name;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $adresse;
 
     /**
-     * @ORM\Column(type="integer")
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $code_postal;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $ville;
 
     /**
-     * @ORM\Column(type="text")
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="text", nullable=true)
      */
     private $accessibilite;
 
     /**
-     * @ORM\Column(type="text")
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="text", nullable=true)
      */
     private $etat_mur;
 
     /**
-     * @ORM\Column(type="integer")
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $superficie;
 
     /**
-     * @ORM\Column(type="integer")
-     * #[Assert\NotBlank]
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $hauteur_max;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
-     * #[Assert\Image]
+     * @ORM\OneToOne(targetEntity=Image::class, cascade={"persist", "remove"})
      */
     private $telecharger_photo;
+
 
     public function getId(): ?int
     {
@@ -174,14 +170,26 @@ class Professionnels extends Comment
         return $this;
     }
 
-    public function getTelechargerPhoto(): ?string
+    public function getTelechargerPhoto(): ? string 
     {
         return $this->telecharger_photo;
     }
 
-    public function setTelechargerPhoto(?string $telecharger_photo): self
+    public function setTelechargerPhoto($telecharger_photo)
     {
         $this->telecharger_photo = $telecharger_photo;
+
+        return $this;
+    }
+
+    public function getImage(): ?image
+    {
+        return $this->image;
+    }
+
+    public function setImage(?image $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
