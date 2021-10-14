@@ -61,9 +61,9 @@ class Image
     {
         $this->imageFile = $image;
 
-        if ($image) {
+        //if ($image) {
             $this->updatedAt = new \DateTime('now');
-        }
+        //}
     }
 
     public function getImageFile()
