@@ -20,15 +20,15 @@ final class Version20211006135224 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('CREATE TABLE professionnels (id INT AUTO_INCREMENT NOT NULL, 
-                                    societe_name VARCHAR(255) NOT NULL, 
-                                    adresse VARCHAR(255) NOT NULL, 
-                                    code_postal INT NOT NULL, 
-                                    ville VARCHAR(255) NOT NULL, 
-                                    accessibilite LONGTEXT NOT NULL, 
-                                    etat_mur LONGTEXT NOT NULL, 
-                                    superficie INT NOT NULL, 
-                                    hauteur_max INT NOT NULL, 
+        $this->addSql('CREATE TABLE professionnels (id INT AUTO_INCREMENT NOT NULL,
+                                    societe_name VARCHAR(255) NOT NULL,
+                                    adresse VARCHAR(255) NOT NULL,
+                                    code_postal INT NOT NULL,
+                                    ville VARCHAR(255) NOT NULL,
+                                    accessibilite LONGTEXT NOT NULL,
+                                    etat_mur LONGTEXT NOT NULL,
+                                    superficie INT NOT NULL,
+                                    hauteur_max INT NOT NULL,
                                     telecharger_photo LONGTEXT DEFAULT NULL,
                         PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
     }
